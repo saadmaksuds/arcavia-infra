@@ -1,0 +1,1407 @@
+/* =====================================================
+   MECCA AVENUE
+   PROJECT DETAIL PAGE
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: 'Manrope', sans-serif;
+
+    background: #ffffff;
+
+    color: #292A35;
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+/* =====================================================
+   CUSTOM CURSOR
+===================================================== */
+
+@media (min-width: 993px) {
+
+
+    * {
+
+        cursor: none !important;
+
+    }
+
+
+    .cursor {
+
+        position: fixed;
+
+        width: 42px;
+
+        height: 42px;
+
+        border: 4px solid #C78A2A;
+
+        border-radius: 50%;
+
+        pointer-events: none;
+
+        z-index: 99999;
+
+        transform: translate(-50%, -50%);
+
+        transition:
+
+            width .25s ease,
+
+            height .25s ease,
+
+            background .25s ease;
+
+    }
+
+
+    .cursor-dot {
+
+        position: fixed;
+
+        width: 7px;
+
+        height: 7px;
+
+        background: #C78A2A;
+
+        border-radius: 50%;
+
+        pointer-events: none;
+
+        z-index: 100000;
+
+        transform: translate(-50%, -50%);
+
+    }
+
+
+    .cursor.hover {
+
+        width: 68px;
+
+        height: 68px;
+
+        background: rgba(199, 138, 42, 0.12);
+
+    }
+
+}
+
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 128px;
+
+    background: #ffffff;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.navbar {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0 4.5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.logo img {
+
+    width: 205px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+
+/* NAV LINKS */
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 65px;
+
+}
+
+
+.nav-links a {
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #222222;
+
+    transition: color .25s ease;
+
+}
+
+
+.nav-links a:hover {
+
+    color: #C78A2A;
+
+}
+
+
+
+/* GET QUOTE */
+
+.quote-button {
+
+    padding: 17px 34px;
+
+    border: 1px solid #222222;
+
+    border-radius: 40px;
+
+    font-size: 17px;
+
+    transition:
+
+        background .3s ease,
+
+        color .3s ease;
+
+}
+
+
+.quote-button:hover {
+
+    background: #C78A2A;
+
+    border-color: #C78A2A;
+
+    color: #ffffff;
+
+}
+
+
+
+/* =====================================================
+   COMMON SECTION TAG
+===================================================== */
+
+.section-tag {
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: #C78A2A;
+
+}
+
+
+
+/* =====================================================
+   PROJECT INTRO
+===================================================== */
+
+.project-intro {
+
+    padding: 110px 8% 80px;
+
+    background: #F7F7F5;
+
+}
+
+
+.intro-content {
+
+    max-width: 1000px;
+
+}
+
+
+.project-intro h1 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(65px, 8vw, 110px);
+
+    font-weight: 600;
+
+    line-height: .95;
+
+    margin: 25px 0;
+
+    color: #292A35;
+
+}
+
+
+.project-intro h1 span {
+
+    color: #C78A2A;
+
+}
+
+
+.project-category {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #666666;
+
+}
+
+
+.project-meta {
+
+    display: flex;
+
+    gap: 80px;
+
+    margin-top: 50px;
+
+}
+
+
+.meta-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.meta-item span {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #C78A2A;
+
+}
+
+
+.meta-item strong {
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+
+
+/* =====================================================
+   PROJECT IMAGES
+===================================================== */
+
+/*
+   IMPORTANT:
+
+   There is NO fixed-height image box.
+
+   The image keeps its ORIGINAL aspect ratio.
+
+   We only limit how large it can become.
+
+   Therefore:
+
+   - no cropping
+   - no stretching
+   - no giant full-screen images
+*/
+
+
+.project-image-section {
+
+    padding: 70px 8%;
+
+    background: #ffffff;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.project-image-wrapper {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* ACTUAL IMAGE */
+
+.project-image-wrapper img {
+
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 100%;
+
+    max-height: 520px;
+
+    object-fit: contain;
+
+    border-radius: 24px;
+
+}
+
+
+/*
+   Extra spacing between
+   the gallery sections
+*/
+
+.gallery-section {
+
+    padding-top: 30px;
+
+    padding-bottom: 80px;
+
+}
+
+
+
+/* =====================================================
+   PROJECT OVERVIEW
+===================================================== */
+
+.overview-section {
+
+    padding: 120px 8%;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.overview-title h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 70px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    margin-top: 20px;
+
+}
+
+
+.overview-title h2 span {
+
+    color: #C78A2A;
+
+}
+
+
+.overview-text p {
+
+    max-width: 620px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #666666;
+
+}
+
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.information-section {
+
+    padding: 100px 8%;
+
+    background: #F7F7F5;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+}
+
+
+.information-block .section-tag {
+
+    margin-bottom: 30px;
+
+}
+
+
+.information-list {
+
+    border-top: 1px solid #dddddd;
+
+}
+
+
+.information-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #dddddd;
+
+    gap: 30px;
+
+}
+
+
+.information-row span {
+
+    color: #777777;
+
+    font-size: 15px;
+
+}
+
+
+.information-row strong {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #292A35;
+
+    text-align: right;
+
+}
+
+
+
+/* =====================================================
+   SCOPE
+===================================================== */
+
+.scope-list {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+
+
+.scope-list li {
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #dddddd;
+
+    font-size: 16px;
+
+    color: #444444;
+
+}
+
+
+.scope-list li::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 8px;
+
+    height: 8px;
+
+    margin-right: 15px;
+
+    background: #C78A2A;
+
+    border-radius: 50%;
+
+}
+
+
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.highlights-section {
+
+    padding: 120px 8%;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.highlights-title h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 68px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    margin-top: 20px;
+
+}
+
+
+.highlights-title h2 span {
+
+    color: #C78A2A;
+
+}
+
+
+.highlights-list {
+
+    border-top: 1px solid #dddddd;
+
+}
+
+
+.highlight-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid #dddddd;
+
+}
+
+
+.highlight-item span {
+
+    color: #C78A2A;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+}
+
+
+.highlight-item p {
+
+    font-size: 17px;
+
+    color: #444444;
+
+}
+
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.project-cta {
+
+    padding: 130px 8%;
+
+    text-align: center;
+
+    background: #F7F7F5;
+
+}
+
+
+.project-cta h2 {
+
+    max-width: 850px;
+
+    margin: 25px auto 45px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 75px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+}
+
+
+.project-cta h2 span {
+
+    color: #C78A2A;
+
+}
+
+
+.primary-button {
+
+    display: inline-block;
+
+    padding: 17px 32px;
+
+    background: #C78A2A;
+
+    color: #ffffff;
+
+    border-radius: 40px;
+
+    font-size: 16px;
+
+    transition:
+
+        transform .3s ease,
+
+        background .3s ease;
+
+}
+
+
+.primary-button:hover {
+
+    background: #a96f18;
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+
+    background: #171717;
+
+    color: #ffffff;
+
+    padding: 50px 8% 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 40px;
+
+}
+
+
+.footer-left img {
+
+    width: 180px;
+
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-left p {
+
+    margin: 0;
+
+    color: #aaaaaa;
+
+    font-size: 14px;
+
+}
+
+
+.copyright {
+
+    margin: 0;
+
+    color: #aaaaaa;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+
+    /* NAVBAR */
+
+    .site-header {
+
+        height: 105px;
+
+    }
+
+
+    .navbar {
+
+        padding: 0 5%;
+
+    }
+
+
+    .logo img {
+
+        width: 175px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 25px;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 15px;
+
+    }
+
+
+    .quote-button {
+
+        padding: 13px 22px;
+
+        font-size: 15px;
+
+    }
+
+
+
+    /* INTRO */
+
+    .project-intro {
+
+        padding: 90px 7% 70px;
+
+    }
+
+
+
+    /* IMAGES */
+
+    .project-image-section {
+
+        padding: 50px 7%;
+
+    }
+
+
+    .project-image-wrapper {
+
+        max-width: 760px;
+
+    }
+
+
+    .project-image-wrapper img {
+
+        max-height: 450px;
+
+    }
+
+
+
+    /* OVERVIEW */
+
+    .overview-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 90px 7%;
+
+    }
+
+
+
+    /* INFORMATION */
+
+    .information-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding: 80px 7%;
+
+    }
+
+
+
+    /* HIGHLIGHTS */
+
+    .highlights-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 90px 7%;
+
+    }
+
+
+
+    /* CTA */
+
+    .project-cta h2 {
+
+        font-size: 62px;
+
+    }
+
+
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+
+    /* NAVBAR */
+
+    .site-header {
+
+        height: 85px;
+
+    }
+
+
+    .navbar {
+
+        padding: 0 6%;
+
+    }
+
+
+    .logo img {
+
+        width: 145px;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .quote-button {
+
+        padding: 10px 17px;
+
+        font-size: 13px;
+
+    }
+
+
+
+    /* INTRO */
+
+    .project-intro {
+
+        padding: 80px 6% 60px;
+
+    }
+
+
+    .project-intro h1 {
+
+        font-size: 58px;
+
+    }
+
+
+    .project-category {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .project-meta {
+
+        gap: 35px;
+
+        flex-wrap: wrap;
+
+        margin-top: 35px;
+
+    }
+
+
+
+    /* IMAGES */
+
+    .project-image-section {
+
+        padding: 35px 6%;
+
+    }
+
+
+    .project-image-wrapper {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+
+    .project-image-wrapper img {
+
+        max-width: 100%;
+
+        max-height: 350px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .gallery-section {
+
+        padding-top: 15px;
+
+        padding-bottom: 45px;
+
+    }
+
+
+
+    /* OVERVIEW */
+
+    .overview-section {
+
+        padding: 75px 6%;
+
+    }
+
+
+    .overview-title h2 {
+
+        font-size: 52px;
+
+    }
+
+
+    .overview-text p {
+
+        font-size: 17px;
+
+        line-height: 1.7;
+
+    }
+
+
+
+    /* INFORMATION */
+
+    .information-section {
+
+        padding: 70px 6%;
+
+    }
+
+
+    .information-row {
+
+        gap: 15px;
+
+    }
+
+
+    .information-row span,
+
+    .information-row strong {
+
+        font-size: 14px;
+
+    }
+
+
+
+    /* HIGHLIGHTS */
+
+    .highlights-section {
+
+        padding: 75px 6%;
+
+    }
+
+
+    .highlights-title h2 {
+
+        font-size: 52px;
+
+    }
+
+
+    .highlight-item {
+
+        gap: 20px;
+
+    }
+
+
+    .highlight-item p {
+
+        font-size: 15px;
+
+    }
+
+
+
+    /* CTA */
+
+    .project-cta {
+
+        padding: 90px 6%;
+
+    }
+
+
+    .project-cta h2 {
+
+        font-size: 52px;
+
+    }
+
+
+
+    /* FOOTER */
+
+    .site-footer {
+
+        padding: 40px 6% 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+    }
+
+
+}
+/* Animation */
+/* =====================================================
+   MECCA AVENUE - SCROLL ANIMATIONS
+===================================================== */
+
+/* Initial hidden state */
+
+.project-intro .intro-content,
+.project-image-section .project-image-wrapper,
+.overview-title,
+.overview-text,
+.information-block,
+.highlight-item,
+.highlights-title,
+.project-cta > *,
+.site-footer > * {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.22,1,.36,1);
+}
+
+
+/* Hero animation */
+
+.project-intro .intro-content.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Image animation */
+
+.project-image-section .project-image-wrapper.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Overview */
+
+.overview-title.animate,
+.overview-text.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Information blocks */
+
+.information-block.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Highlights */
+
+.highlights-title.animate,
+.highlight-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* CTA */
+
+.project-cta > *.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Footer */
+
+.site-footer > *.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   STAGGER EFFECTS
+===================================================== */
+
+.information-block:nth-child(2) {
+    transition-delay: .15s;
+}
+
+.highlight-item:nth-child(2) {
+    transition-delay: .15s;
+}
+
+.project-cta h2 {
+    transition-delay: .1s;
+}
+
+.project-cta .primary-button {
+    transition-delay: .2s;
+}
+
+.site-footer .copyright {
+    transition-delay: .15s;
+}
+
+
+/* =====================================================
+   IMAGE REVEAL
+===================================================== */
+
+.project-image-wrapper {
+    overflow: hidden;
+}
+
+.project-image-wrapper img {
+    transition:
+        transform 1.2s cubic-bezier(.22,1,.36,1);
+}
+
+.project-image-wrapper.animate img {
+    transform: scale(1);
+}
+
+
+/* Start slightly zoomed */
+
+.project-image-wrapper img {
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   REDUCE MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-intro .intro-content,
+    .project-image-section .project-image-wrapper,
+    .overview-title,
+    .overview-text,
+    .information-block,
+    .highlight-item,
+    .highlights-title,
+    .project-cta > *,
+    .site-footer > * {
+
+        opacity: 1;
+        transform: none;
+        transition: none;
+
+    }
+
+    .project-image-wrapper img {
+        transform: none;
+        transition: none;
+    }
+
+}

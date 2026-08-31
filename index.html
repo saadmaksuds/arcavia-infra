@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arcavia Infra | Building Spaces That Inspire</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Cursor -->
+
+    <!-- Custom Cursor -->
+
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="#" class="logo">
+                <img src="Assets/Images/logo.png" alt="Arcavia Infra">
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <div class="nav-btn">
+    <a href="#contact" class="btn-nav">Get Quote</a>
+</div>
+
+     <div class="menu-toggle">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="overlay"></div>
+
+        <!-- Use image now, later replace with video -->
+
+        <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video/Hero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+        <div class="hero-content">
+
+            <p class="subtitle">
+
+                PREMIUM CONSTRUCTION & INTERIOR SOLUTIONS
+
+            </p>
+
+            <h1>
+    Building <br>
+    Spaces <span>That Inspire.</span>
+</h1>
+
+            <p class="hero-text">
+
+                Delivering modern construction, luxury interiors,
+                and future-ready infrastructure with precision,
+                quality, and trust.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn-nav">
+
+                    Explore Projects
+
+                </a>
+
+                <a href="#contact" class="btn-nav">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="scroll">
+
+            Scroll
+
+        </div>
+
+    </section>
+
+<!--============ Statement =============-->
+
+
+<section class="statement">
+
+    <div class="statement-content">
+
+        <p class="section-tag">
+            OUR PHILOSOPHY
+        </p>
+
+        <h2 class="statement-title">
+
+    <span class="line">Engineering</span>
+
+    <span class="line">tomorrow's</span>
+
+    <span class="line highlight">landmarks.</span>
+
+</h2>
+
+    </div>
+
+</section>
+<!--========== About =========-->
+
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img src="Assets/Images/about.jpg" alt="Arcavia">
+
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-tag">
+                WHO WE ARE
+            </p>
+
+            <h2 class="about-title">
+
+                We transform
+                <span>ideas</span>
+
+                into lasting
+                <span>landmarks.</span>
+
+            </h2>
+
+            <p>
+
+                At Arcavia Infra, every project is driven by
+                precision, innovation and craftsmanship.
+                From residential developments to premium
+                commercial spaces, we create environments
+                designed to stand the test of time.
+
+            </p>
+
+            <a href="Assets/Documents/Arcavia-Brochure.pdf" class="primary-btn" download>
+                Download Brochure ↓
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--Services-->
+
+<section class="services" id="services">
+
+    <div class="services-left">
+
+        <p class="section-tag">
+            OUR EXPERTISE
+        </p>
+
+        <div class="service active" data-image="Assets/Images/construction.jpg">
+
+            <span>01</span>
+
+            <h3>Construction</h3>
+
+        </div>
+
+        <div class="service" data-image="Assets/Images/interior.jpg">
+
+            <span>02</span>
+
+            <h3>Interior Design</h3>
+
+        </div>
+
+        <div class="service" data-image="Assets/Images/landscape.jpg">
+
+            <span>03</span>
+
+            <h3>Landscape</h3>
+
+        </div>
+
+        <div class="service" data-image="Assets/Images/pmc.jpg">
+
+            <span>04</span>
+
+            <h3>Project Management</h3>
+
+        </div>
+
+    </div>
+
+    <div class="services-right">
+
+        <img id="serviceImage"
+             src="Assets/Images/construction.jpg">
+
+    </div>
+
+</section>
+
+ <!--==================== FEATURED PROJECTS ====================-->
+
+<section class="projects"  id="projects">
+
+    <div class="projects-heading">
+
+        <p class="section-tag">FEATURED PROJECTS</p>
+
+        <h2>
+            Every project reflects our commitment 
+            to precision and timeless design.
+        </h2>
+
+    </div>
+
+    <div class="slider">
+
+        <!-- Slide 1 -->
+        <div class="slide active">
+
+            <img src="Assets/Images/MeccaAvenue1.png">
+
+            <div class="slide-overlay">
+
+                <h2>Mecca Avenue</h2>
+
+                <h4>Luxury Residential • Damat, Neral</h4>
+
+                <p>
+                    Premium residences designed with
+                    modern architecture and exceptional craftsmanship.
+                </p>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+        </div>
+
+        <!-- Slide 2 -->
+
+        <div class="slide">
+
+            <img src="Assets/Images/MakkaComplex1.png">
+
+            <div class="slide-overlay">
+
+                <h2>Mekka Complex</h2>
+
+                <h4>Luxury Residential • Damat, Neral</h4>
+
+                <p>
+
+                    A large-scale residential development 
+                    project involving multiple buildings with 
+                    modern infrastructure and planned 
+                    execution.
+
+                </p>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+        </div>
+
+        <!-- Slide 3 -->
+
+        <div class="slide">
+
+            <img src="Assets/Images/G+1.png">
+
+            <div class="slide-overlay">
+
+                <h2>G+1</h2>
+
+                <h4>Luxury Villa • Interior + Construction • Vishrantwadi, Pune</h4>
+
+                <p>
+
+                    Elegant interiors combined
+                    with timeless architecture.
+
+                </p>
+
+                <a href="#">View Project →</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <div class="slider-nav">
+
+        <button id="prev">
+            &#10094;
+        </button>
+
+        <div class="progress">
+
+            <div class="progress-bar"></div>
+
+        </div>
+
+        <button id="next">
+            &#10095;
+        </button>
+
+    </div>
+
+    <div class="projects-btn">
+
+        <a href="projects.html" class="primary-btn">
+    Explore All Projects →
+        </a>
+    </div>
+
+</section>
+
+<!--==================== BY THE NUMBERS ====================-->
+
+<section class="numbers">
+
+    <div class="numbers-heading">
+
+        <p class="section-tag">
+            ARCAVIA IN NUMBERS
+        </p>
+
+        <h2>
+            Built on trust.<br>
+            Driven by excellence.
+        </h2>
+
+    </div>
+
+    <div class="numbers-grid">
+
+        <div class="number-card">
+
+            <h3 class="counter" data-target="150">0</h3>
+
+            <h4>Projects Delivered</h4>
+
+            <p>
+                Residential, commercial and interior projects completed with precision.
+            </p>
+
+        </div>
+
+        <div class="number-card">
+
+            <h3 class="counter" data-target="20">0</h3>
+
+            <h4>Years Experience</h4>
+
+            <p>
+                Two decades of expertise in construction and infrastructure.
+            </p>
+
+        </div>
+
+        <div class="number-card">
+
+            <h3 class="counter" data-target="98">0</h3>
+
+            <h4>Client Satisfaction</h4>
+
+            <p>
+                Building lasting relationships through quality and trust.
+            </p>
+
+        </div>
+
+        <div class="number-card">
+
+            <h3 class="counter" data-target="50">0</h3>
+
+            <h4>Experts</h4>
+
+            <p>
+                Architects, engineers and skilled professionals working together.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================== CTA ====================-->
+
+<section class="cta"  id="contact">
+
+    <div class="cta-left">
+
+        <p class="section-tag">
+            LET'S BUILD TOGETHER
+        </p>
+
+        <h2 class="cta-title">
+
+            Ready to build your
+            <span>next landmark?</span>
+
+        </h2>
+
+        <p class="cta-text">
+
+            Whether it's a luxury residence,
+            commercial development or premium interiors,
+            Arcavia Infra is ready to transform your vision
+            into a timeless reality.
+
+        </p>
+
+    </div>
+
+    <div class="cta-right">
+
+        <div class="contact-box">
+
+            <h3>Start Your Project</h3>
+
+            <p>
+                Let's discuss your ideas and create
+                something extraordinary together.
+            </p>
+
+            <a href="#" class="primary-btn">
+                Get Free Consultation →
+            </a>
+
+            <div class="contact-info">
+
+                <div>
+
+                    <span>Email</span>
+
+                    <h4>arcaviainfra@gmail.com</h4>
+
+                </div>
+
+                <div>
+
+                    <span>Call Us</span>
+
+                    <h4>+91 96070 46753</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================== FOOTER ====================-->
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <img src="Assets/Images/logo.png" alt="Arcavia">
+
+            <p>
+                Building spaces that inspire through modern
+                construction, premium interiors and timeless design.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>Company</h4>
+
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>Services</h4>
+
+            <a href="#">Construction</a>
+            <a href="#">Interior Design</a>
+            <a href="#">Renovation</a>
+            <a href="#">Consultation</a>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>Contact</h4>
+
+            <p>+91 96070 46753</p>
+
+            <p>arcaviainfra@gmail.com</p>
+
+            <p>Pune, Maharashtra</p>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Arcavia Infra. All Rights Reserved.
+
+        </p>
+
+        <p>
+
+            Engineering Tomorrow's Landmarks.
+
+        </p>
+
+    </div>
+
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
