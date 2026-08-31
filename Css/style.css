@@ -212,7 +212,7 @@ HERO
 
 ========================= */
 
-.Hero{
+.hero{
 
 height:100vh;
 
@@ -228,7 +228,7 @@ padding:0 10%;
 
 }
 
-.Hero-video {
+.hero-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -249,7 +249,7 @@ padding:0 10%;
     z-index: -1;
 }
 
-.Hero-video {
+.hero-video {
     animation: heroZoom 18s ease-in-out infinite alternate;
 }
 
@@ -262,7 +262,7 @@ padding:0 10%;
     }
 }
 
-.Hero-content{
+.hero-content{
 
 max-width:600px;
 
@@ -282,7 +282,7 @@ color:#c78a2a;
 
 }
 
-.Hero h1{
+.hero h1{
 
 font-family:'Cormorant Garamond',serif;
 
@@ -296,7 +296,7 @@ margin-bottom:25px;
 
 }
 
-.Hero-text{
+.hero-text{
 
 font-size:18px;
 
@@ -310,7 +310,7 @@ max-width:600px;
 
 }
 
-.Hero-buttons{
+.hero-buttons{
 
 display:flex;
 
