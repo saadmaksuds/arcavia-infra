@@ -681,3 +681,215 @@
     text-decoration: none;
 
 }
+
+/* =========================================
+   PROJECTS NAVBAR - MOBILE RESPONSIVE
+========================================= */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: currentColor;
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px 25px;
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 25px;
+        left: auto;
+        width: 220px;
+
+        flex-direction: column;
+        gap: 0;
+
+        padding: 15px 20px;
+
+        background: #ffffff;
+        border-radius: 12px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 13px 5px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+/* ================================
+   MOBILE MENU BUTTON
+================================ */
+
+.menu-toggle {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    z-index: 1001;
+
+    background: none;
+
+    border: none;
+
+    padding: 5px;
+
+}
+
+.menu-toggle span {
+
+    width: 28px;
+
+    height: 2px;
+
+    background: white;
+
+    transition: .35s ease;
+
+}
+
+
+/* When navbar becomes white */
+
+.project-header.scrolled .menu-toggle span {
+
+    background: #222;
+
+}
+
+
+/* ================================
+   MOBILE NAVBAR
+================================ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        position: relative;
+
+        padding: 20px 25px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: flex;
+
+        margin-left: auto;
+
+    }
+
+
+    .nav-btn {
+
+        display: none;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: calc(100% + 10px);
+
+        right: 25px;
+
+        left: auto;
+
+        width: 220px;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 12px 20px;
+
+        background: white;
+
+        border-radius: 12px;
+
+        box-shadow: 0 10px 30px rgba(0,0,0,.15);
+
+        z-index: 1000;
+
+    }
+
+
+    .nav-links.active {
+
+        display: flex;
+
+    }
+
+
+    .nav-links li {
+
+        width: 100%;
+
+    }
+
+
+    .nav-links li a {
+
+        display: block;
+
+        padding: 13px 5px;
+
+        color: #222 !important;
+
+    }
+
+}

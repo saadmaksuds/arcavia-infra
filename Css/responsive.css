@@ -761,3 +761,548 @@ header{
     }
 
 }
+
+/* =========================================================
+   FINAL MOBILE FIX — INDEX PAGE
+   ========================================================= */
+
+/* ---------- GENERAL MOBILE FIX ---------- */
+
+@media (max-width: 768px){
+
+    html,
+    body{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+    }
+
+    section{
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+    }
+
+    /* Prevent long text from forcing page wider */
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a{
+        max-width:100%;
+        overflow-wrap:break-word;
+    }
+
+    /* ---------- NAVBAR ---------- */
+
+    header{
+        width:100%;
+        padding:18px 20px;
+    }
+
+    .navbar{
+        width:100%;
+        min-width:0;
+    }
+
+    .logo{
+        min-width:0;
+    }
+
+    .logo img{
+        width:135px;
+        max-width:100%;
+    }
+
+    .menu-toggle{
+        flex-shrink:0;
+        margin-left:auto;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero{
+        width:100%;
+        min-height:100svh;
+        height:100svh;
+        padding:0 20px;
+    }
+
+    .hero-content{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+    }
+
+    .subtitle{
+        font-size:10px;
+        letter-spacing:2.5px;
+        line-height:18px;
+        margin-bottom:20px;
+    }
+
+    .hero h1{
+        width:100%;
+        max-width:100%;
+        font-size:40px;
+        line-height:44px;
+        letter-spacing:-.5px;
+    }
+
+    .hero-text{
+        width:100%;
+        max-width:100%;
+        font-size:15px;
+        line-height:25px;
+        margin-bottom:30px;
+    }
+
+    .hero-buttons{
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        gap:12px;
+    }
+
+    .hero-buttons .btn-nav{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+        padding:14px 20px;
+    }
+
+
+    /* ---------- STATEMENT ---------- */
+
+    .statement{
+        width:100%;
+        min-height:auto;
+        padding:80px 20px;
+    }
+
+    .statement-content{
+        width:100%;
+        max-width:100%;
+    }
+
+    .section-tag{
+        font-size:11px;
+        letter-spacing:3px;
+        margin-bottom:25px;
+    }
+
+    .statement-title{
+        width:100%;
+        font-size:48px;
+        line-height:.98;
+        letter-spacing:-1px;
+        gap:5px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about{
+        width:100%;
+        padding:80px 20px;
+    }
+
+    .about-container{
+        width:100%;
+        max-width:100%;
+        gap:45px;
+    }
+
+    .about-image{
+        width:100%;
+        max-width:100%;
+        height:420px;
+        flex:none;
+        border-radius:20px;
+    }
+
+    .about-content{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+    }
+
+    .about-title{
+        width:100%;
+        font-size:48px;
+        line-height:1;
+        margin:20px 0;
+        letter-spacing:-1px;
+    }
+
+    .about-content p{
+        width:100%;
+        max-width:100%;
+        font-size:16px;
+        line-height:28px;
+        margin-bottom:30px;
+    }
+
+    .about-content .primary-btn{
+        display:inline-block;
+        max-width:100%;
+        padding:15px 25px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services{
+        width:100%;
+        grid-template-columns:1fr;
+        padding:80px 20px;
+        gap:40px;
+    }
+
+    .services-left,
+    .services-right{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+    }
+
+    .services-right{
+        order:-1;
+    }
+
+    .services-right img{
+        width:100%;
+        max-width:100%;
+        height:280px;
+        object-fit:cover;
+        border-radius:20px;
+    }
+
+    .service{
+        width:100%;
+        padding:20px 0;
+    }
+
+    .service h3{
+        font-size:26px;
+        line-height:1.1;
+    }
+
+
+    /* ---------- FEATURED PROJECTS ---------- */
+
+    .projects{
+        width:100%;
+        padding:80px 20px;
+    }
+
+    .projects-heading{
+        width:100%;
+        max-width:100%;
+        margin-bottom:35px;
+    }
+
+    .projects-heading h2{
+        width:100%;
+        max-width:100%;
+        font-size:36px;
+        line-height:1.05;
+        letter-spacing:-.5px;
+    }
+
+    .slider{
+        width:100%;
+        max-width:100%;
+        height:390px;
+        aspect-ratio:auto;
+        border-radius:18px;
+    }
+
+    .slide{
+        width:100%;
+        max-width:100%;
+    }
+
+    .slide img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    .slide-overlay{
+        left:18px;
+        right:18px;
+        bottom:18px;
+        width:auto;
+        max-width:none;
+    }
+
+    .slide-overlay h2{
+        font-size:30px;
+        line-height:1;
+    }
+
+    .slide-overlay h4{
+        font-size:13px;
+        line-height:20px;
+        margin:8px 0;
+    }
+
+    .slide-overlay p{
+        display:none;
+    }
+
+    .slider-nav{
+        width:100%;
+        gap:15px;
+        margin-top:20px;
+    }
+
+    .slider-nav button{
+        flex-shrink:0;
+        width:42px;
+        height:42px;
+    }
+
+    .progress{
+        min-width:0;
+    }
+
+    .projects-btn{
+        margin-top:45px;
+    }
+
+
+    /* ---------- NUMBERS ---------- */
+
+    .numbers{
+        width:100%;
+        padding:80px 20px;
+    }
+
+    .numbers-heading{
+        width:100%;
+        max-width:100%;
+        margin-bottom:45px;
+    }
+
+    .numbers-heading h2{
+        width:100%;
+        font-size:46px;
+        line-height:1;
+        letter-spacing:-1px;
+    }
+
+    .numbers-grid{
+        width:100%;
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .number-card{
+        width:100%;
+        min-width:0;
+        padding:30px;
+        border-radius:18px;
+    }
+
+    .number-card h3{
+        font-size:60px;
+    }
+
+    .number-card h4{
+        font-size:20px;
+    }
+
+    .number-card p{
+        font-size:15px;
+        line-height:25px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta{
+        width:100%;
+        grid-template-columns:1fr;
+        padding:80px 20px;
+        gap:45px;
+    }
+
+    .cta-left,
+    .cta-right{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+    }
+
+    .cta-title{
+        width:100%;
+        max-width:100%;
+        font-size:48px;
+        line-height:1;
+        letter-spacing:-1px;
+    }
+
+    .cta-text{
+        width:100%;
+        max-width:100%;
+        font-size:16px;
+        line-height:28px;
+    }
+
+    .contact-box{
+        width:100%;
+        max-width:100%;
+        padding:35px 25px;
+        border-radius:20px;
+    }
+
+    .contact-box h3{
+        font-size:30px;
+    }
+
+    .contact-box p{
+        font-size:15px;
+        line-height:25px;
+    }
+
+    .contact-box .primary-btn{
+        display:block;
+        width:100%;
+        text-align:center;
+        padding:15px 20px;
+    }
+
+    .contact-info{
+        width:100%;
+        max-width:100%;
+        gap:20px;
+    }
+
+    .contact-info h4{
+        font-size:17px;
+        overflow-wrap:anywhere;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer{
+        width:100%;
+        padding:70px 20px 25px;
+        overflow:hidden;
+    }
+
+    .footer-top{
+        width:100%;
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .footer-brand,
+    .footer-links{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+    }
+
+    .footer-brand img{
+        width:150px;
+    }
+
+    .footer-brand p{
+        max-width:100%;
+        font-size:15px;
+        line-height:26px;
+    }
+
+    .footer-links p{
+        overflow-wrap:anywhere;
+    }
+
+    .footer-bottom{
+        width:100%;
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+        line-height:22px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px){
+
+    .logo img{
+        width:125px;
+    }
+
+    .hero{
+        padding:0 18px;
+    }
+
+    .hero h1{
+        font-size:36px;
+        line-height:40px;
+    }
+
+    .subtitle{
+        font-size:9px;
+        letter-spacing:2px;
+    }
+
+    .hero-text{
+        font-size:14px;
+        line-height:24px;
+    }
+
+    .statement{
+        padding:70px 18px;
+    }
+
+    .statement-title{
+        font-size:42px;
+    }
+
+    .about,
+    .services,
+    .projects,
+    .numbers,
+    .cta{
+        padding-left:18px;
+        padding-right:18px;
+    }
+
+    .about-title,
+    .cta-title{
+        font-size:42px;
+    }
+
+    .about-image{
+        height:360px;
+    }
+
+    .projects-heading h2{
+        font-size:32px;
+    }
+
+    .slider{
+        height:360px;
+    }
+
+    .slide-overlay h2{
+        font-size:27px;
+    }
+
+    .numbers-heading h2{
+        font-size:42px;
+    }
+
+}

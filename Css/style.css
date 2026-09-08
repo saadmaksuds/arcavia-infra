@@ -1238,6 +1238,8 @@ font-size:12px;
 
 /*==================== CUSTOM CURSOR ====================*/
 
+/* DESKTOP CURSOR */
+
 @media (min-width: 993px){
 
     *{
@@ -1251,7 +1253,7 @@ font-size:12px;
         width:42px;
         height:42px;
 
-       border:4px solid #C78A2A;
+        border:4px solid #C78A2A;
 
         border-radius:50%;
 
@@ -1296,6 +1298,75 @@ font-size:12px;
         background:rgba(199,138,42,.12);
 
         border:3px solid #C78A2A;
+
+    }
+
+}
+
+
+/* MOBILE / TABLET TOUCH CURSOR */
+
+@media (max-width: 992px){
+
+    .cursor{
+
+        position:fixed;
+
+        width:38px;
+        height:38px;
+
+        border:3px solid #C78A2A;
+
+        border-radius:50%;
+
+        pointer-events:none;
+
+        z-index:99999;
+
+        transform:translate(-50%, -50%);
+
+        opacity:0;
+
+        transition:
+            opacity .25s ease,
+            width .2s ease,
+            height .2s ease,
+            background .2s ease;
+
+    }
+
+    .cursor-dot{
+
+        position:fixed;
+
+        width:6px;
+        height:6px;
+
+        background:#C78A2A;
+
+        border-radius:50%;
+
+        pointer-events:none;
+
+        z-index:100000;
+
+        transform:translate(-50%, -50%);
+
+        opacity:0;
+
+        transition:opacity .2s ease;
+
+    }
+
+    .cursor.touch-active{
+
+        opacity:1;
+
+    }
+
+    .cursor-dot.touch-active{
+
+        opacity:1;
 
     }
 

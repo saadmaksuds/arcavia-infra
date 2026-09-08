@@ -350,13 +350,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const cursor = document.querySelector(".cursor");
     const cursorDot = document.querySelector(".cursor-dot");
 
-
     if (!cursor || !cursorDot) {
-
         return;
-
     }
 
+
+    /* ================= DESKTOP CURSOR ================= */
 
     let mouseX = 0;
     let mouseY = 0;
@@ -370,7 +369,6 @@ document.addEventListener("DOMContentLoaded", function () {
         mouseX = e.clientX;
         mouseY = e.clientY;
 
-
         cursorDot.style.left = mouseX + "px";
         cursorDot.style.top = mouseY + "px";
 
@@ -382,18 +380,17 @@ document.addEventListener("DOMContentLoaded", function () {
         cursorX += (mouseX - cursorX) * 0.15;
         cursorY += (mouseY - cursorY) * 0.15;
 
-
         cursor.style.left = cursorX + "px";
         cursor.style.top = cursorY + "px";
-
 
         requestAnimationFrame(animateCursor);
 
     }
 
-
     animateCursor();
 
+
+    /* ================= DESKTOP HOVER ================= */
 
     document.addEventListener("mouseover", function(e) {
 
@@ -423,6 +420,66 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
+
+
+    /* ================= MOBILE TOUCH ================= */
+
+    document.addEventListener("touchstart", function(e) {
+
+        const touch = e.touches[0];
+
+        if (!touch) return;
+
+        const x = touch.clientX;
+        const y = touch.clientY;
+
+
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+
+        cursorDot.style.left = x + "px";
+        cursorDot.style.top = y + "px";
+
+
+        cursor.classList.add("touch-active");
+        cursorDot.classList.add("touch-active");
+
+    }, { passive:true });
+
+
+    /* ================= FOLLOW FINGER ================= */
+
+    document.addEventListener("touchmove", function(e) {
+
+        const touch = e.touches[0];
+
+        if (!touch) return;
+
+        const x = touch.clientX;
+        const y = touch.clientY;
+
+
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+
+        cursorDot.style.left = x + "px";
+        cursorDot.style.top = y + "px";
+
+    }, { passive:true });
+
+
+    /* ================= HIDE AFTER TOUCH ================= */
+
+    document.addEventListener("touchend", function() {
+
+        setTimeout(function() {
+
+            cursor.classList.remove("touch-active");
+            cursorDot.classList.remove("touch-active");
+
+        }, 250);
+
+    }, { passive:true });
 
 });
 
@@ -750,3 +807,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
