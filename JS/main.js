@@ -422,29 +422,85 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* ================= MOBILE TOUCH ================= */
+  /* ================= MOBILE TOUCH ================= */
 
-    document.addEventListener("touchstart", function(e) {
-
-        const touch = e.touches[0];
-
-        if (!touch) return;
-
-        const x = touch.clientX;
-        const y = touch.clientY;
+let touchX = 0;
+let touchY = 0;
+let isTouching = false;
 
 
-        cursor.style.left = x + "px";
-        cursor.style.top = y + "px";
+/* TOUCH START */
 
-        cursorDot.style.left = x + "px";
-        cursorDot.style.top = y + "px";
+document.addEventListener("touchstart", function (e) {
+
+    const touch = e.touches[0];
+
+    if (!touch) return;
+
+    touchX = touch.clientX;
+    touchY = touch.clientY;
+    isTouching = true;
+
+    cursor.style.left = touchX + "px";
+    cursor.style.top = touchY + "px";
+
+    cursorDot.style.left = touchX + "px";
+    cursorDot.style.top = touchY + "px";
+
+    cursor.classList.add("touch-active");
+    cursorDot.classList.add("touch-active");
+
+}, { passive: true });
 
 
-        cursor.classList.add("touch-active");
-        cursorDot.classList.add("touch-active");
+/* TOUCH MOVE */
 
-    }, { passive:true });
+document.addEventListener("touchmove", function (e) {
+
+    const touch = e.touches[0];
+
+    if (!touch) return;
+
+    touchX = touch.clientX;
+    touchY = touch.clientY;
+
+}, { passive: true });
+
+
+/* UPDATE POSITION */
+
+function updateMobileTouchCursor() {
+
+    if (isTouching) {
+
+        cursor.style.left = touchX + "px";
+        cursor.style.top = touchY + "px";
+
+        cursorDot.style.left = touchX + "px";
+        cursorDot.style.top = touchY + "px";
+
+    }
+
+    requestAnimationFrame(updateMobileTouchCursor);
+}
+
+updateMobileTouchCursor();
+
+
+/* TOUCH END */
+
+document.addEventListener("touchend", function () {
+
+    isTouching = false;
+
+    setTimeout(function () {
+
+        cursor.classList.remove("touch-active");
+        cursorDot.classList.remove("touch-active");
+
+    }, 250);
+
+}, { passive: true });
 
 
     /* ================= FOLLOW FINGER ================= */
